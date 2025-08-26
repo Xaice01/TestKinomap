@@ -9,11 +9,12 @@ plugins {
 
 android {
     namespace = "com.xavier_carpentier.testkinomap"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.xavier_carpentier.testkinomap"
-        minSdk = 24
+        minSdk = 21
+        //noinspection OldTargetApi
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -32,11 +33,13 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
-    kotlinOptions {
-        jvmTarget = "11"
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8)
+        }
     }
     buildFeatures {
         compose = true
@@ -83,7 +86,7 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.okhttp.logging)
 
-    // Images +++
+    // Images
     implementation(libs.coil.compose)
 
 

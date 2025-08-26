@@ -1,4 +1,4 @@
-package com.xavier_carpentier.testkinomap.ui.theme
+package com.xavier_carpentier.testkinomap.presentation.theme
 import androidx.compose.ui.graphics.Color
 
 val primaryLight = Color(0xFF775A0B)

@@ -1,4 +1,4 @@
-package com.xavier_carpentier.testkinomap.ui.theme
+package com.xavier_carpentier.testkinomap.presentation.theme
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

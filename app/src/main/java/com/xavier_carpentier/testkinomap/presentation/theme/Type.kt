@@ -1,4 +1,4 @@
-package com.xavier_carpentier.testkinomap.ui.theme
+package com.xavier_carpentier.testkinomap.presentation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

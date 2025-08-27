@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -7,11 +9,21 @@ plugins {
     kotlin("kapt")
 }
 
+val localProps = Properties().apply {
+    val f = rootProject.file("local.properties")
+    if (f.exists()) f.inputStream().use { load(it) }
+}
+val kinomapToken = (localProps.getProperty("KINOMAP_APP_TOKEN") ?: "")
+
 android {
     namespace = "com.xavier_carpentier.testkinomap"
     compileSdk = 36
 
     defaultConfig {
+
+        //pour cacher le token dans le fichier local.properties
+        buildConfigField("String", "KINOMAP_APP_TOKEN", "\"$kinomapToken\"")
+
         applicationId = "com.xavier_carpentier.testkinomap"
         minSdk = 21
         //noinspection OldTargetApi
@@ -42,11 +54,10 @@ android {
         }
     }
     buildFeatures {
+        buildConfig = true
         compose = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.15"
-    }
+
 }
 
 dependencies {
@@ -69,6 +80,10 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
+    testImplementation(libs.junit)
+    testImplementation(libs.okhttp.mockwebserver)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.truth)
     debugImplementation(libs.androidx.ui.test.manifest)
 
 

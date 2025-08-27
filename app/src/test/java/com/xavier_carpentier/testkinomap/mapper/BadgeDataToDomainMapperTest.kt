@@ -1,4 +1,4 @@
-package com.xavier_carpentier.testkinomap
+package com.xavier_carpentier.testkinomap.mapper
 
 import com.xavier_carpentier.testkinomap.data.model.BadgeData
 import com.xavier_carpentier.testkinomap.data.model.BadgeCategoryData

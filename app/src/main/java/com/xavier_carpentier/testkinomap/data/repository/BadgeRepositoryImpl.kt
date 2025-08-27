@@ -24,6 +24,6 @@ class BadgeRepositoryImpl @Inject constructor(
             .also { cache = it }
     }
 
-    override suspend fun getBadgeById(id: String): Badge? =
+    override suspend fun getBadgeById(id: Int): Badge? =
         fetchCategories().asSequence().flatMap { it.badges.asSequence() }.firstOrNull { it.id == id }
 }

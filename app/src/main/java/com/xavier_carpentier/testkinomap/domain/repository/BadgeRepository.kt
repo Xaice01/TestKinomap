@@ -5,5 +5,5 @@ import com.xavier_carpentier.testkinomap.domain.model.BadgeCategory
 
 interface BadgeRepository {
     suspend fun fetchCategories(): List<BadgeCategory>
-    suspend fun getBadgeById(id: String): Badge?
+    suspend fun getBadgeById(id: Int): Badge?
 }

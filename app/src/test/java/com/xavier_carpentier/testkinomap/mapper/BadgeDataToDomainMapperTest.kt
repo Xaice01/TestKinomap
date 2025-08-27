@@ -25,7 +25,7 @@ class BadgeDataToDomainMapperTest {
 
         val domain: Badge = data.toDomain()
 
-        assertEquals("10", domain.id)
+        assertEquals(10, domain.id)
         assertEquals("T", domain.title)
         assertEquals("D", domain.description)
         assertTrue(domain.isUnlocked)

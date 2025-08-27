@@ -7,7 +7,7 @@ import com.xavier_carpentier.testkinomap.domain.model.BadgeCategory
 
 fun BadgeData.toDomain(): Badge =
     Badge(
-        id = id.toString(),
+        id = id,
         title = title,
         description = description,
         category = category,

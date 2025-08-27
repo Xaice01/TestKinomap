@@ -95,9 +95,9 @@ class BadgeRepositoryImplTest {
         """.trimIndent()
         server.enqueue(MockResponse().setResponseCode(200).setBody(body))
 
-        val badge = repo.getBadgeById("10")
+        val badge = repo.getBadgeById(10)
         assertThat(badge).isNotNull()
-        assertThat(badge!!.id).isEqualTo("10")
+        assertThat(badge!!.id).isEqualTo(10)
         assertThat(badge.isUnlocked).isTrue()
     }
 }

@@ -33,7 +33,7 @@ class BadgeDomainToUiMapperTest {
     @Test
     fun `maps locked badge with progress and formats date label null`() {
         val domain = Badge(
-            id = "1",
+            id = 1,
             title = "Name",
             description = "Desc",
             category = "Activity",
@@ -46,7 +46,7 @@ class BadgeDomainToUiMapperTest {
 
         val ui: BadgeUi = domain.toUi()
 
-        assertEquals("1", ui.id)
+        assertEquals(1, ui.id)
         assertEquals("Name", ui.title)
         assertEquals("Activity", ui.subtitleCategory)
         assertEquals("Desc", ui.description)
@@ -60,7 +60,7 @@ class BadgeDomainToUiMapperTest {
     fun `maps unlocked badge and formats unlocked date`() {
         val epoch = 1_734_035_200L // 2024-12-12 00:00:00 UTC
         val domain = Badge(
-            id = "2",
+            id = 2,
             title = "Name2",
             description = null,
             category = "Travel",
@@ -84,7 +84,7 @@ class BadgeDomainToUiMapperTest {
             name = "Activity",
             badges = listOf(
                 Badge(
-                    id = "1",
+                    id = 1,
                     title = "A",
                     description = null,
                     category = "Activity",

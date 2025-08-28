@@ -6,6 +6,7 @@ sealed interface BadgesListUiState {
     data object Empty : BadgesListUiState
     data object Loading : BadgesListUiState
     data class Success(
-        val categories: List<BadgeCategoryUi>
+        val categories: List<BadgeCategoryUi>,
+        val query: String = ""
     ) : BadgesListUiState
 }

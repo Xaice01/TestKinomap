@@ -7,6 +7,6 @@ data class BadgeUi(
     val description: String?,
     val progressPct: Int,
     val isUnlocked: Boolean,
-    val imageUrlToShow: String?, // déjà résolu (locked/unlocked)
-    val unlockedDateLabel: String? // ex: "Débloqué le : 2025-03-21"
+    val imageUrlToShow: String?,
+    val unlockedDateLabel: String? 
 )

@@ -1,4 +1,4 @@
-package com.xavier_carpentier.testkinomap.ui.theme
+package com.xavier_carpentier.testkinomap.presentation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
@@ -25,8 +25,8 @@ val Typography = Typography(
     labelSmall = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Medium,
-        fontSize = 11.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
+        fontSize = 10.sp,
+        lineHeight = 10.sp,
+        letterSpacing = 0.sp
     )
 )

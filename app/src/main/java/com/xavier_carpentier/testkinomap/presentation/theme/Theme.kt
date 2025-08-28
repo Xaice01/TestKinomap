@@ -1,4 +1,4 @@
-package com.xavier_carpentier.testkinomap.ui.theme
+package com.xavier_carpentier.testkinomap.presentation.theme
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -254,8 +254,7 @@ val unspecified_scheme = ColorFamily(
 @Composable
 fun TestKinomapTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable() () -> Unit
 ) {
   val colorScheme = when {

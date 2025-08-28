@@ -81,8 +81,7 @@ Sync Gradle, puis Run sur un émulateur ou appareil
 
 2. Via l’APK (installation directe)
 
-Télécharge le fichier APK depuis la section Releases
- du dépôt GitHub
+Télécharge le fichier APK depuis la section Releases (https://github.com/Xaice01/TestKinomap/tree/development/app/release) du dépôt GitHub
 
 Copie-le sur ton téléphone Android
 
